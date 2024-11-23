@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import React, { useState } from 'react'
 import { BackgroundGradientAnimation } from "./GradientBg";
-import { PhotoBubble } from "./PhotoBubble";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json"
 import { IoCopyOutline } from "react-icons/io5";
@@ -11,6 +10,9 @@ import { MovingCards } from "./MovingCards";
 import { faces, techStack } from "@/data";
 import Image from 'next/image';
 import { email } from '@/data'
+import dynamic from 'next/dynamic';
+
+const PhotoBubble = dynamic(() => import('./PhotoBubble').then((mod) => mod.PhotoBubble), { ssr: false });
 
 export const BentoGrid = ({
   className,
