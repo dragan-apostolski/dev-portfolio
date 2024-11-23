@@ -40,7 +40,13 @@ export const BackgroundGradientAnimation = ({
   const [curY, setCurY] = useState(0);
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
+
+  const isClient = typeof document !== 'undefined';
+
   useEffect(() => {
+
+    if (!isClient) return; // Prevent running on the server
+
     document.body.style.setProperty(
       "--gradient-background-start",
       gradientBackgroundStart
