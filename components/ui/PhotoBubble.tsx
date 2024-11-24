@@ -44,7 +44,7 @@ export const PhotoBubble: React.FC<PhotoBubbleProps> = ({ photos }) => {
       };
 
       const distance = calculateDistance(event.clientX, event.clientY);
-      if (distance >= 200 && distance <= 800) {
+      if (distance >= 200 && distance <= 500) {
         const angle = calculateAngle(event.clientX, event.clientY);
         if (angle >= 337.5 || angle < 22.5) setCurrentPhoto(photos.up);
         else if (angle >= 22.5 && angle < 67.5) setCurrentPhoto(photos['left-up']);

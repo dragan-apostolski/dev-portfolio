@@ -1,8 +1,6 @@
 'use client'
 import { cn } from "@/lib/utils";
 import React, { useState } from 'react'
-import Lottie from "react-lottie";
-import animationData from "@/data/confetti.json"
 import { IoCopyOutline } from "react-icons/io5";
 import MagicButton from "./MagicButton";
 import { MovingCards } from "./MovingCards";
@@ -112,18 +110,6 @@ export const BentoGridItem = ({
           )}
           { id ===  7 && (
             <div className="mt-5 relative">
-              <div className="absolute -bottom-5 right-0">
-                <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData: animationData,
-                    rendererSettings: {
-                      preserveAspectRatio: 'xMidYMid slice'
-                    }
-                  }}
-                />
-              </div>
               <MagicButton
                 title={copied ? 'Email copied' : 'Copy my email'}
                 icon={<IoCopyOutline/>}
