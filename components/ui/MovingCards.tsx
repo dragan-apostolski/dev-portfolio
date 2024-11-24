@@ -7,7 +7,7 @@ import Image from 'next/image';
 export const MovingCards = ({
   items,
   direction = "left",
-  speed = "fast",
+  speed = "normal",
   pauseOnHover = true,
   className,
 }: {
@@ -38,7 +38,6 @@ export const MovingCards = ({
           scrollerRef.current.appendChild(duplicatedItem);
         }
       });
-
       getDirection();
       getSpeed();
       setStart(true);
@@ -83,7 +82,7 @@ export const MovingCards = ({
         className={cn(
           " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
-          pauseOnHover && "hover:[animation-play-state:paused]"
+          pauseOnHover && "hover:[animation-play-state:paused] hover:cursor-pointer"
         )}
       >
         {items.map((item) => (
