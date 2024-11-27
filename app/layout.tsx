@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import React from 'react'
 
+
 export const metadata: Metadata = {
   title: "Dragan Apostolski",
   description: "Full-stack web developer",
@@ -22,6 +23,13 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Apostolski" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+        <meta property="og:image" content="/favicon/web-app-manifest-512x512.png" />
+        <meta property="og:title" content="Dragan Apostolski" />
+        <meta property="og:description" content="Full-stack web developer" />
+        <meta property="og:url" content="https://apostolski-dragan.com" />
+        <meta property="og:type" content="website" />
+
       </head>
       <body>
         <ThemeProvider
