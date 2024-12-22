@@ -9,14 +9,15 @@ import { email } from '@/data'
 const Footer = () => {
   return (
     <footer className='w-full' id='contact'>
-      <GridBackground>
+      <GridBackground className='h-[50rem] items-center'>
         <div className='flex flex-col items-center justify-center'>
-
           <div 
             className='flex flex-col items-center'
           >
             <h1 className='heading lg:max-w-[45vw]'>
-              Ready to <span className='text-purple'>implement</span> your next idea?
+              Ready to
+              <span className='text-purple'> implement </span> 
+              your next idea?
             </h1>
             <p className='text-white-200 md:mt-10 my-5 text-center'>
               Reach out to me today and let&apos;s discuss how I can help you

@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-type PhotoBubbleProps = {
+interface PhotoBubbleProps {
   photos: {
     normal: string;
     up: string;
@@ -15,9 +15,10 @@ type PhotoBubbleProps = {
     right: string;
     'right-up': string;
   };
-};
+  className?: string;
+}
 
-export const PhotoBubble: React.FC<PhotoBubbleProps> = ({ photos }) => {
+export const PhotoBubble: React.FC<PhotoBubbleProps> = ({ photos, className }) => {
   const [currentPhoto, setCurrentPhoto] = useState(photos.normal);
   const bubbleRef = useRef<HTMLDivElement>(null);
 
@@ -44,7 +45,7 @@ export const PhotoBubble: React.FC<PhotoBubbleProps> = ({ photos }) => {
       };
 
       const distance = calculateDistance(event.clientX, event.clientY);
-      if (distance >= 200 && distance <= 500) {
+      if (distance >= 50 && distance <= 800) {
         const angle = calculateAngle(event.clientX, event.clientY);
         if (angle >= 337.5 || angle < 22.5) setCurrentPhoto(photos.up);
         else if (angle >= 22.5 && angle < 67.5) setCurrentPhoto(photos['left-up']);
@@ -68,9 +69,9 @@ export const PhotoBubble: React.FC<PhotoBubbleProps> = ({ photos }) => {
   return (
     <div
       ref={bubbleRef}
-      className="relative flex justify-center items-center bg-purple
-       transition-transform duration-1000 ease-in-out hover:scale-150 animate-bubble-pulse
-       overflow-hidden w-64 h-64 md:w-72 md:h-72 rounded-lg"
+      className={`relative flex justify-center items-center bg-purple
+       transition-transform duration-1000 ease-in-out animate-bubble-pulse
+       overflow-hidden w-48 h-48 md:w-72 md:h-72 rounded-lg ${className}`}
     >
       <Image
         src={currentPhoto}

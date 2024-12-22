@@ -1,6 +1,6 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Work Experience", link: "#experience" },
+  { name: "Experience", link: "#experience" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
 ];
@@ -24,14 +24,17 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "",
-    description: [],
+    title: "General knowledge",
+    description: [
+      "I am the generalist type, and the full-stack engineer is the perfect role for me. But even beyond full-stack development, my interests spread far & wide.",
+      "I have a decent academic background in AI & Machine Learning, and working for a crypto exchange for 3+ years, I have gained a lot of knowledge in the blockchain space as well."
+    ],
     className: "md:col-span-3 md:row-span-1 lg:col-span-2",
   },
   {
     id: 3,
     title: "Tech stack",
-    description: ["I always to try to keet up with the latest technologies."],
+    description: ["I always to try to keep up with the latest technologies."],
     className: " md:col-span-6 lg:col-span-5 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center",

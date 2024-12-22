@@ -1,15 +1,14 @@
 'use client'
 import { cn } from "@/lib/utils";
-import React, { useState } from 'react'
-import { IoCopyOutline } from "react-icons/io5";
+import React from 'react'
+import { FaLocationArrow } from 'react-icons/fa'
 import MagicButton from "./MagicButton";
 import { MovingCards } from "./MovingCards";
-import { faces, techStack } from "@/data";
+import { techStack } from "@/data";
 import Image from 'next/image';
 import { email } from '@/data'
 import dynamic from 'next/dynamic';
 
-const PhotoBubble = dynamic(() => import('./PhotoBubble').then((mod) => mod.PhotoBubble), { ssr: false });
 const BackgroundGradientAnimation = dynamic(() => import('./GradientBg').then((mod) => mod.BackgroundGradientAnimation), { ssr: false });
 
 export const BentoGrid = ({
@@ -49,13 +48,6 @@ export const BentoGridItem = ({
   titleClassName?: string,
 }) => {
 
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(email)
-    setCopied(true)
-  }
-
   return (
     <div
       className={cn(
@@ -86,7 +78,6 @@ export const BentoGridItem = ({
         <div className={cn(
           titleClassName, 
           'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full flex flex-col px-5 p-5 lg:p-10' 
-          + ` ${id === 2 && "min-h-72 lg:min-h-96 justify-center items-center "}`
           + ` ${id === 7 && "justify-around"}`,
         )}>
           {/* Render Title and description */}
@@ -101,7 +92,6 @@ export const BentoGridItem = ({
             }
           </div>
           {/* Render custom components */}
-          { id === 2 && <PhotoBubble photos={faces}/> }
           { id === 3  && (
             <MovingCards
               speed="normal"
@@ -111,11 +101,11 @@ export const BentoGridItem = ({
           { id ===  7 && (
             <div className="mt-5 relative">
               <MagicButton
-                title={copied ? 'Email copied' : 'Copy my email'}
-                icon={<IoCopyOutline/>}
+                title="Reach out"
+                icon={<FaLocationArrow/>}
                 otherClasses="`!bg-[#161a31]`"
-                iconPosition="center"
-                handleClick={handleCopy}
+                iconPosition="right"
+                handleClick={() => window.location.href = `mailto:${email}`}
               />
             </div>
           )}

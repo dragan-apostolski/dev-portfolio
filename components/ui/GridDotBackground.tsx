@@ -2,11 +2,13 @@ import React from 'react';
 
 export function GridBackground({
   children,
+  className,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode,
+  className?: string,
 }>) {
   return (
-    <div className="h-[50rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.2] relative flex items-center justify-center">
+    <div className={`w-full bg-black bg-grid-white/[0.03] relative flex items-start mt-10 justify-center ${className}`}>
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
       {children}
     </div>
