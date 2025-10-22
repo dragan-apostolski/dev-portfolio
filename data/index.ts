@@ -13,8 +13,8 @@ export const gridItems = [
     id: 1,
     title: "About me",
     description: [
-      "I am Dragan Apostolski, a 28-year old full-stack engineer, based in Slovenia.",
-      "I hold a BsC in Computer Science & Engineering, and 5 years of professional experience in the industry, including a running 3-year tenure at Bitstamp, one of the leading global crypto exchanges.",
+      "I am Dragan Apostolski, a 29-year old full-stack engineer, based in Slovenia.",
+      "I hold a BsC in Computer Science & Engineering, and 6 years of professional experience in the industry, including a running 4-year tenure at Bitstamp (by Robinhood), one of the leading global crypto exchanges.",
       "I enjoy building web applications end to end, from backend business logic to polished frontends, ensuring seamless and efficient web experiences.",
     ],
     className: "lg:col-span-3 md:col-span-3 md:row-span-1",
@@ -42,11 +42,11 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Attention to detail",
+    title: "AI driven development",
     description: [
-      `I put a lot of emphasis on the tiny details of an application.
-       Writing a clean code, scalable components, utilizing tests, and using design patterns is what makes an application maintainble in the long term.
-      `,
+      `I am passionate about AI and its potential to transform the way we develop software.`,
+      `Today, I am fully utilizing AI and writing almost 100% of the code with the help of AI agents.`,
+      `Also, I have a solid background in AI and Machine Learning, and I can easily implement solutions for automating complex tasks and workflows with the help of AI.`,
     ],
     className: "md:col-span-3 md:row-span-1",
     imgClassName: "absolute right-0 top-0 w-full h-full",
@@ -231,10 +231,8 @@ export const workExperience = [
     title: "Software engineer",
     company: "Bitstamp",
     tenure: "Aug 2021 - Present",
-    desc: "At Bitstamp, I am involved in the development of user interfaces, APIs, and backend business logic related to user onboarding & compliance."  + 
-    " So far, I have learned a bunch of new technologies, methods, practices, and soft skills. I got a chance to learn more advanced frontend development" + 
-    " while using the Nuxt.js & Vue.js frameworks, components, CSS pre-compliers, bundling, etc. " + 
-    " Here I also had a chance to meet more advanced backend design patterns like domain driven development, microservice architectures, the mediator pattern, etc. ",
+    desc: "At Bitstamp, I work across the stack: from developing user interfaces, APIs, to backend business logic ."  + 
+    "Using modern web technologies and software engineering best practices, I am responsible for building scalable and efficient features across our platform.",
     className: "",
     thumbnail: "/companies/bitstamp.png",
     icons: [
