@@ -231,7 +231,7 @@ export const workExperience = [
     title: "Software engineer",
     company: "Bitstamp",
     tenure: "Aug 2021 - Present",
-    desc: "At Bitstamp, I work across the stack: from developing user interfaces, APIs, to backend business logic ."  + 
+    desc: "At Bitstamp, I work across the stack: from developing user interfaces, APIs, to backend business logic. "  + 
     "Using modern web technologies and software engineering best practices, I am responsible for building scalable and efficient features across our platform.",
     className: "",
     thumbnail: "/companies/bitstamp.png",
