@@ -32,7 +32,9 @@ const Footer = () => {
           </div>
 
           <div className='flex flex-col items-center justify-center mt-20 gap-y-4'>
-            <p className='md:text-base md:font-normal text-sm font-light'>Copyright &copy; 2024 Dragan Apostolski</p>
+            <p className='md:text-base md:font-normal text-sm font-light'>
+              Copyright &copy; {new Date().getFullYear()} Dragan Apostolski
+            </p>
 
             <div className='flex items-center md:gap-3 gap-6'>
               {socialMedia.map((profile) => (

@@ -164,34 +164,63 @@ export const techStack = [
 export const projects = [
   {
     id: 1,
-    title: "Natours",
-    des: "A demo website for hiking tour agency, built with pure HTML & CSS.",
-    img: "/projects/natours.png",
-    iconLists: ["/icons/html.svg", "/icons/css.svg", "/icons/scss.svg"],
-    link: "https://github.com/dragan-apostolski/Natours",
+    title: "Photography Portfolio",
+    des: "A personal photography portfolio showcasing landscape, travel, and portrait photography, built with Nuxt.js & Tailwind CSS.",
+    img: "/projects/photography-portfolio.png",
+    iconLists: [
+      { icon: "/icons/vue.svg", name: "Vue.js" },
+      { icon: "/icons/tailwind.svg", name: "Tailwind CSS" },
+      { icon: "/icons/ts.svg", name: "TypeScript" }
+    ],
+    link: "https://github.com/dragan-apostolski/photography-portfolio",
+    liveLink: "https://photography-portfolio-six-taupe.vercel.app/",
+    badge: "In Progress",
   },
   {
     id: 2,
-    title: "Trillo",
-    des: "Demo website for an all-in-one booking app, built using HTML & CSS flexbox.",
-    img: "/projects/trillo.png",
-    iconLists: ["/icons/html.svg", "/icons/css.svg",  "/icons/scss.svg"],
-    link: "https://github.com/dragan-apostolski/Trillo",
+    title: "Natours",
+    des: "A demo website for hiking tour agency, built with pure HTML & CSS.",
+    img: "/projects/natours.png",
+    iconLists: [
+      { icon: "/icons/html.svg", name: "HTML" },
+      { icon: "/icons/css.svg", name: "CSS" },
+      { icon: "/icons/scss.svg", name: "SCSS" }
+    ],
+    link: "https://github.com/dragan-apostolski/Natours",
   },
   {
     id: 3,
-    title: "Nexter",
-    des: "A website for a real-estate agency, built with the CSS gridbox framework.",
-    img: "/projects/nexter.png",
-    iconLists: ["/icons/html.svg", "/icons/css.svg",  "/icons/scss.svg"],
-    link: "https://github.com/dragan-apostolski/Nexter",
+    title: "Trillo",
+    des: "Demo website for an all-in-one booking app, built using HTML & CSS flexbox.",
+    img: "/projects/trillo.png",
+    iconLists: [
+      { icon: "/icons/html.svg", name: "HTML" },
+      { icon: "/icons/css.svg", name: "CSS" },
+      { icon: "/icons/scss.svg", name: "SCSS" }
+    ],
+    link: "https://github.com/dragan-apostolski/Trillo",
   },
   {
     id: 4,
+    title: "Nexter",
+    des: "A website for a real-estate agency, built with the CSS gridbox framework.",
+    img: "/projects/nexter.png",
+    iconLists: [
+      { icon: "/icons/html.svg", name: "HTML" },
+      { icon: "/icons/css.svg", name: "CSS" },
+      { icon: "/icons/scss.svg", name: "SCSS" }
+    ],
+    link: "https://github.com/dragan-apostolski/Nexter",
+  },
+  {
+    id: 5,
     title: "Simple Bank",
     des: "A simple microservices that simulates a banking system, written in Go. The app can be also run as a Docker container.",
     img: "/projects/bank.png",
-    iconLists: ["/icons/go.svg", "/icons/docker.svg"],
+    iconLists: [
+      { icon: "/icons/go.svg", name: "Go" },
+      { icon: "/icons/docker.svg", name: "Docker" }
+    ],
     link: "https://github.com/dragan-apostolski/SimpleBank",
   },
 ];
@@ -208,7 +237,16 @@ export const workExperience = [
     " Here I also had a chance to meet more advanced backend design patterns like domain driven development, microservice architectures, the mediator pattern, etc. ",
     className: "",
     thumbnail: "/companies/bitstamp.png",
-    icons: ["/icons/python.svg", "/icons/django.svg", "/icons/javascript.svg","/icons/vue.svg", "/icons/postcss.svg", "/icons/aws.svg","/icons/docker.svg", "/icons/go.svg"],
+    icons: [
+      { icon: "/icons/python.svg", name: "Python" },
+      { icon: "/icons/django.svg", name: "Django" },
+      { icon: "/icons/javascript.svg", name: "JavaScript" },
+      { icon: "/icons/vue.svg", name: "Vue.js" },
+      { icon: "/icons/postcss.svg", name: "PostCSS" },
+      { icon: "/icons/aws.svg", name: "AWS" },
+      { icon: "/icons/docker.svg", name: "Docker" },
+      { icon: "/icons/go.svg", name: "Go" }
+    ],
   },
   {
     id: 2,
@@ -226,7 +264,13 @@ export const workExperience = [
     `,
     className: "",
     thumbnail: "/companies/informa.png",
-    icons: ["/icons/python.svg", "/icons/django.svg","/icons/javascript.svg", "icons/html.svg", "icons/css.svg"],
+    icons: [
+      { icon: "/icons/python.svg", name: "Python" },
+      { icon: "/icons/django.svg", name: "Django" },
+      { icon: "/icons/javascript.svg", name: "JavaScript" },
+      { icon: "/icons/html.svg", name: "HTML" },
+      { icon: "/icons/css.svg", name: "CSS" }
+    ],
   },
   {
     id: 3,
@@ -237,7 +281,10 @@ export const workExperience = [
     " Here I started getting to know the industry, how do things work in a company, what are client requirements, and how to do some technical planning." ,
     className: "",
     thumbnail: "/companies/bmg.png",
-    icons: ["icons/android.svg", "icons/java.svg"],
+    icons: [
+      { icon: "/icons/android.svg", name: "Android" },
+      { icon: "/icons/java.svg", name: "Java" }
+    ],
   },
 ];
 
