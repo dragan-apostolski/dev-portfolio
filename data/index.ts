@@ -186,6 +186,7 @@ export const projects = [
       { icon: "/icons/scss.svg", name: "SCSS" }
     ],
     link: "https://github.com/dragan-apostolski/Natours",
+    badge: null,
   },
   {
     id: 3,
