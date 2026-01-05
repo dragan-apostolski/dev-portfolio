@@ -173,8 +173,7 @@ export const projects = [
       { icon: "/icons/ts.svg", name: "TypeScript" }
     ],
     link: "https://github.com/dragan-apostolski/photography-portfolio",
-    liveLink: "https://photography-portfolio-six-taupe.vercel.app/",
-    badge: "In Progress",
+    liveLink: "https://photography.apostolski-dragan.com/",
   },
   {
     id: 2,
